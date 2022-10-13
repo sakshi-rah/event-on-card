@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Card</title>
+    <style>
+        .card-container{
+            padding-left: 550px;
+            padding-right: 550px;
+            padding-top: 120px;
+        }
+        .card {
+            background-color: #00b3b3;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+            text-align: center;
+            width: 250px;
+            color: aliceblue;
+        }
+
+        .card:hover {
+            box-shadow: 0px 2px 2px 4px rgb(47, 48, 47);
+            border: none;
+
+        }
+
+        .img-card {
+            width: 200px;
+            border-radius: 10px;
+            cursor: pointer;
+
+        }
+
+        .btn-1 {
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #002E6E;
+            border: none;
+            color: white;
+            font-size: 13px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .card-btn {
+            display: flex;
+            justify-content: center;
+            padding-left: 25px;
+        }
+
+        .btn-1:hover {
+            box-shadow: 0px 0px 4px 2px black;
+            color: aliceblue;
+        }
+
+        .onclick-event {
+            display: flex;
+            justify-content: space-evenly;
+            height: 25px;
+        }
+        .btn-2{
+            border-radius: 50%;
+            width: 25px;
+            border: none;
+            box-shadow: 0px 0px 4px 1px black;
+            cursor: pointer;
+        }
+
+        h2 {
+            margin-top: 0px;
+        }
+    </style>
+    <script>
+        let count = 0;
+        function inc() {
+            count++;
+            document.getElementById("counter").innerHTML = count;
+        }
+        function dec() {
+            count--;
+            document.getElementById("counter").innerHTML = count;
+        }
+        function reset() {
+            count = 0;
+            document.getElementById("counter").innerHTML = count;
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="card-container">
+    <div class="card">
+        <div>
+            <img src="chocolate.webp" alt="" class="img-card">
+        </div> <br>
+        <div>
+            <p>
+                Chocolates bars nicely arranged <br> Dairy milk chocolate
+            </p>
+            <h4> MRP:Rs 758 </h4>
+            <div class="card-btn">
+                <button class="btn-1">Add to card</button>
+                <a href="">
+                    <p></p>
+                </a>
+            </div><br>
+
+            <div class="onclick-event">
+                <button onclick="dec()" class="btn-2">-</button>
+                <h2 id="counter">0</h2>
+                <button onclick="inc()" class="btn-2">+</button>
+                <button onclick="reset()" class="btn-1">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
